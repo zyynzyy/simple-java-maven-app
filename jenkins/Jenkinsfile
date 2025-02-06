@@ -19,7 +19,6 @@ node {
 
         stage('Manual Approval') {
             input message: 'Apakah mau melanjutkan ke tahap deploy? (Click "Proceed" to continue)'
-            sleep 60
         }
 
         stage('Deploy') {
@@ -44,6 +43,7 @@ node {
 
                 """
             }
+            sleep 60
         }
     }
 }
