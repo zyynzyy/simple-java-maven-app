@@ -35,10 +35,7 @@ node {
                     ssh -o StrictHostKeyChecking=no ${env.EC2_USER}@${env.EC2_HOST} 'cd java-maven'
 
                 """
-                sh """ 
-                    ssh -o StrictHostKeyChecking=no ${env.EC2_USER}@${env.EC2_HOST} 'chmod +x /target/my-app-1.0-SNAPSHOT.jar'
 
-                """
                 sh """ 
                     ssh -o StrictHostKeyChecking=no ${env.EC2_USER}@${env.EC2_HOST} 'java -jar target/my-app-1.0-SNAPSHOT.jar'
 
