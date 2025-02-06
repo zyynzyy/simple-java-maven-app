@@ -44,8 +44,6 @@ node {
 
                 """
             }
-            // input message: 'Apakah sudah selesai menggunakan aplikasi? (Click "Proceed" to continue)'
-            // sh './jenkins/scripts/kill.sh'
         }
     }
 }
