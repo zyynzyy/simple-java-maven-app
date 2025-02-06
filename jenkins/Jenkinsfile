@@ -32,8 +32,9 @@ node {
                     scp -r -o StrictHostKeyChecking=no target ${env.EC2_USER}@${env.EC2_HOST}:/home/ubuntu/java-maven
                 """
                 sh 'pwd'
-                sh 'chmod +x /java-maven/target/my-app-1.0-SNAPSHOT.jar'
-                sh 'java -jar /java-maven/target/my-app-1.0-SNAPSHOT.jar'
+                sh 'cd java-maven'
+                // sh 'chmod +x target/my-app-1.0-SNAPSHOT.jar'
+                sh 'java -jar target/my-app-1.0-SNAPSHOT.jar'
             }
             // input message: 'Apakah sudah selesai menggunakan aplikasi? (Click "Proceed" to continue)'
             // sh './jenkins/scripts/kill.sh'
